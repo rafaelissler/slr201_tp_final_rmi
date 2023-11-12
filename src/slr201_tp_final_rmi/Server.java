@@ -1,5 +1,8 @@
 package slr201_tp_final_rmi;
 
+import java.net.Inet4Address;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -48,7 +51,7 @@ public class Server {
 			}
 		}
 		catch (RemoteException e) {e.printStackTrace();}
-        System.out.println("[INIT] Registry initialized");
+        System.out.println("[INIT] Registry initialized with port " + port);
 	}
 	public static void main(String[] args) {
 		new Server(args);
